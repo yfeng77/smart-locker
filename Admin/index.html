@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Form - FAU Library</title>
+		<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>FAU Library</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"><i class="fas fa-window-maximize"></i><span>Form</span></a></li>
+										<li class="nav-item" role="presentation"><a class="nav-link" href="Lockers.html"><i class="fas fa-window-maximize"></i><span>Locker Access</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="history.html"><i class="fas fa-table"></i><span>History</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.html"><i class="far fa-user-circle"></i><span>Logout</span></a></li>
+                    <li class="nav-item" role="presentation"></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown no-arrow" role="presentation">
+                                <div class="nav-item dropdown no-arrow">
+                                    <span class="d-none d-lg-inline mr-2 text-gray-600 small">Librarian Name</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-1">Student Form</h3>
+										<div class="card shadow">
+											<div class="card-body">
+												<div class="container">
+													<div class="row">
+															<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">                        
+																<h2>Student Info</h2>
+															</div>
+													</div>
+													<div align="center">
+															<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3" >
+																	<form id="student-form" class="form" action="#" method="POST" role="form" >
+																			<div class="form-group" >
+																					<label class="form-label" for="name">Student Name</label>
+																					<input type="text" class="form-control" id="name" name="name" placeholder="Enter Student Name" taEbindex="1"  required>
+																			</div>
+																			<div class="form-group">
+																					<label class="form-label" for="email">Student  Email</label>
+																					<input type="email" class="form-control" id="email" name="email" placeholder="Enter Student Email" tabindex="2" required>
+																			</div>
+																			<div class="form-group">
+																					<label class="form-label" for="subject">Number of Books</label>
+																					<input type="number" class="form-control" id="Number of Books" name="Number of Books" placeholder="Enter Number of Books" tabindex="3" min="0" 	 required>
+																			</div>    
+																			<div class="form-group">
+																					<label class="form-label" for="subject">Locker #</label>
+                                                                                    <input type="text" class="form-control" id="lnum" name="lnum" placeholder="Automated Locker Number"  required>
+																					<input type="text" class="form-control" id="Locker #" name="Locker #" placeholder="Automated Locker Number" tabindex="4" disabled>
+																			</div>                            
+																			<div class="form-group">
+																					<label class="form-label" for="subject"> Pin #</label>
+																					<input type="text" class="form-control"  id="Pin #" name="Pin #" placeholder="Automated Pin Code" tabindex="5" disabled>
+																			</div>    
+																			<button class="button button1">Submit</button>
+																	</form>
+															</div>
+													</div>
+												</div>
+											</div>
+										</div>
+                </div>
+            </div>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

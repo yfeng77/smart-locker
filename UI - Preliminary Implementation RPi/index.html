@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Entry UI</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+</head>
+
+<body id="page-top">  
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    
+        const socket = io();
+    
+        //turn off led on load
+        socket.emit("LED1", Number(0));
+        socket.emit("LED2", Number(0));
+
+        function validate() {
+            var form = document.getElementById('code').value;
+            const error = document.getElementById('error');
+
+            if (form == "111111") {
+                error.style.display = "none";
+                socket.emit("LED1", Number(1));
+                window.location.href = "http://192.168.1.20:8080/open.html";
+            } else if (form == "222222") {
+                error.style.display = "none";
+                socket.emit("LED2", Number(1));
+                window.location.href = "http://192.168.1.20:8080/open.html";
+            } else {
+                error.style.display = "block";
+            }
+        }//end validate()
+    </script>
+    
+    <header class="d-flex masthead" style="background-image:url('');">
+        <div class="container my-auto text-center">
+
+            <h1 class="mb-1">Enter PIN Number</h1>
+            <form>
+            
+            <div style="display: none; width: 350px; height: 50px; border: solid 1px black; background-color: gainsboro; margin: auto; margin-bottom: 10px;" id="error">
+                <p style="color: red; text-align: center; font-size: medium;">PIN number entered is not associated with a locker. <br> Please try again...</p>
+            </div>
+            
+            <div class="btn-group-vertical" role="group" aria-label="Basic example">
+           
+                <div class="btn-group">
+                    <input class="text-center form-control-lg mb-2" id="code">
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(1);">1</button>
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(2);">2</button>
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(3);">3</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(4);">4</button>
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(5);">5</button>
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(6);">6</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(7);">7</button>
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(8);">8</button>
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(9);">9</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput('C');">C</button>
+                    <button type="button" class="btn btn-outline-secondary py-3" onclick="formInput(0);">0</button>
+                    <button type="button" class="btn btn-primary" onclick="validate();">E</button>
+                </div>
+            </div>
+               </form> 
+            <h3 class="mb-5"></h3><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="qrcode.html">QR Code</a>
+            <div class="overlay"></div>
+        </div>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
